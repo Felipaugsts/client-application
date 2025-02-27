@@ -1,0 +1,44 @@
+# Ignorar arquivos do banco de dados SQLite
+*.sqlite3
+db.sqlite3
+
+# Ignorar arquivos de migração do Django
+*/migrations/*
+!*/migrations/__init__.py
+
+# Ignorar arquivos temporários do editor (Ex: VSCode, PyCharm)
+.vscode/
+.idea/
+
+db.sqlite3
+
+# Ignorar arquivos de compilação do Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignorar ambientes virtuais
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Ignorar arquivos de logs
+*.log
+
+# Ignorar arquivos de cache
+*.pot
+*.pyc
+
+# Ignorar arquivos de configuração do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de dependências do Python (caso você queira sempre gerar via pip)
+*.egg-info/
+*.dist-info/
+
+# Ignorar arquivos de configuração do Django
+*.log
