@@ -142,3 +142,5 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME_LATE_USER': timedelta(days=1),
     'SLIDING_TOKEN_LIFETIME_LATE_USER': timedelta(days=30)
 }
+
+ALLOWED_HOSTS = ['client-application-i1q3.onrender.com', 'localhost', '127.0.0.1', '0.0.0.0', '[::1]']
