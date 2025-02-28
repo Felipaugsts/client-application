@@ -2,21 +2,21 @@
 
 # Define variables
 PYTHON = python
-DJANGO_MANAGE = python AuthClient/manage.py
+DJANGO_MANAGE = python ClientApi/manage.py
 
 # Run the development server
 run:
-	cd ./AuthClient
+	cd ./ClientApi
 	$(DJANGO_MANAGE) runserver
 
 # Create a new Django superuser
 createsuperuser:
-	cd ./AuthClient
+	cd ./ClientApi
 	$(DJANGO_MANAGE) createsuperuser
 
 # Run database migrations
 migrate:
-	cd ./AuthClient
+	cd ./ClientApi
 	$(DJANGO_MANAGE) makemigrations
 	$(DJANGO_MANAGE) migrate
 
