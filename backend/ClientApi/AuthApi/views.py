@@ -17,11 +17,11 @@ class Home(APIView):
         return Response(content, status=status.HTTP_200_OK)
     
 class CreateUserView(APIView):
-    permission_classes = [AllowAny]  # Qualquer pessoa pode criar um usuário
+    permission_classes = [AllowAny]  
 
     def post(self, request, *args, **kwargs):
-        serializer = UserSerializer(data=request.data)  # Passando os dados da requisição para o serializer
-        if serializer.is_valid():  # Verificando se os dados são válidos
-            user = serializer.save()  # Salva o usuário
-            return Response(serializer.data, status=status.HTTP_201_CREATED)  # Retorna os dados do usuário criado
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  # Caso os dados não sejam válidos
+        serializer = UserSerializer(data=request.data) 
+        if serializer.is_valid(): 
+            user = serializer.save() 
+            return Response(serializer.data, status=status.HTTP_201_CREATED) 
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST) 
