@@ -7,7 +7,7 @@ DJANGO_MANAGE = python ClientApi/manage.py
 # Run the development server
 run:
 	cd ./ClientApi
-	$(DJANGO_MANAGE) runserver
+	$(DJANGO_MANAGE) runserver 0.0.0.0:8000
 
 # Create a new Django superuser
 createsuperuser:
