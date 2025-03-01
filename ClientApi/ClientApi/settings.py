@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_simplejwt',
-    'AuthApi'
+    'AuthApi',
+    'corsheaders',
+    'UserProducts'
 ]
 
 MIDDLEWARE = [
@@ -51,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'ClientApi.urls'
@@ -144,3 +147,31 @@ SIMPLE_JWT = {
 }
 
 ALLOWED_HOSTS = ['client-application-i1q3.onrender.com', 'localhost', '127.0.0.1', '0.0.0.0', '[::1]']
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://client-application-i1q3.onrender.com',  # Certifique-se de incluir o protocolo 'https'
+    'http://localhost', 
+    'http://127.0.0.1', 
+    'http://0.0.0.0', 
+    'http://[::1]'
+]
+
+CORS_ALLOW_HEADERS = [
+    'content-type',
+    'authorization',
+    'x-csrftoken',
+    'accept',
+]
+
+# Permitir certos métodos
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'PATCH',
+    'DELETE',
+    'OPTIONS',
+]
+
+# Permitir cookies em CORS (necessário para autenticação com cookies)
+CORS_ALLOW_CREDENTIALS = True
