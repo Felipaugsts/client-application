@@ -9,6 +9,9 @@ class Product(models.Model):
     description = models.CharField(max_length=255)
     imageUrl = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
+    isNew = models.BooleanField(auto_created=True, default=False)
+    price = models.IntegerField(default=0)
+    rate = models.IntegerField()
 
     def __str__(self):
         return self.title
