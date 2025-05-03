@@ -132,7 +132,8 @@ SIMPLE_JWT = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",         # Vite dev server
     "http://127.0.0.1:5173",         # Outra forma local
-    "https://client-application-i1q3.onrender.com",  # Hospedado
+    "https://client-application-i1q3.onrender.com",  # Hospedado,
+    "https://florist-catalog.web.app"
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -140,7 +141,8 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost', 
     'http://127.0.0.1', 
     'http://0.0.0.0', 
-    'http://[::1]'
+    'http://[::1]',
+    "https://florist-catalog.web.app"
 ]
 
 CORS_ALLOW_HEADERS = [
