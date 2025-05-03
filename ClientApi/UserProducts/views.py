@@ -26,7 +26,6 @@ def create_post(request):
         
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
- 
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def get_products(request): 
